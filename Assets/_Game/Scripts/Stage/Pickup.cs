@@ -5,10 +5,16 @@ namespace Archer
 {
     public enum PickupType { Exp, Coin }
 
-    /// <summary>경험치 보석 / 코인. 방을 클리어하면 플레이어에게 빨려 들어간다.</summary>
+    /// <summary>
+    /// 경험치 보석 / 코인. 플레이어가 가까이 오거나 방을 클리어하면 플레이어에게 빨려 들어간다.
+    /// </summary>
     public class Pickup : MonoBehaviour
     {
         public PickupType type;
+        [Tooltip("플레이어가 이 거리(m) 안에 들어오면 빨려 들어감")]
+        public float pickupRadius = 2f;
+        [Tooltip("떨어진 직후 이 시간(초) 동안은 흩어지기만 하고 안 빨려 감")]
+        public float pickupDelay = 0.35f;
         [Tooltip("주웠을 때 반짝임 (비면 없음)")]
         public HitSpark collectFx;
         public Color collectColor = Color.white;
@@ -20,7 +26,7 @@ namespace Archer
         int value;
         Vector3 vel;
         bool magnet;
-        float speed;
+        float speed, age;
 
         public void Init(int amount, Vector3 velocity)
         {
@@ -28,6 +34,7 @@ namespace Archer
             vel = velocity;
             magnet = false;
             speed = 0f;
+            age = 0f;
             if (!Active.Contains(this)) Active.Add(this);
         }
 
@@ -55,6 +62,15 @@ namespace Archer
             var gm = GameManager.I;
             var player = gm != null ? gm.Player : null;
             if (player == null) return;
+
+            // 가까이 가면 바로 흡수 (죽은 뒤엔 안 빨려 감)
+            age += dt;
+            if (!magnet && age >= pickupDelay && !player.IsDead)
+            {
+                var d = player.transform.position - transform.position;
+                d.y = 0f;
+                if (d.sqrMagnitude <= pickupRadius * pickupRadius) StartMagnet();
+            }
 
             if (magnet)
             {

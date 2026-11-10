@@ -51,6 +51,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: baf547ae3038ca34ead87741f587b0e0, type: 3}
   - {fileID: 21300000, guid: 9393140e26a80b7419b055cf85318510, type: 3}
   - {fileID: 21300000, guid: a8bcd7190dd520f42a8a900087e91abd, type: 3}
+  - {fileID: 21300000, guid: 20e1b602b66306a409e226389d4ba422, type: 3}
+  - {fileID: 21300000, guid: bed9efdc461cc1f4a943c774bb5be7c7, type: 3}
+  - {fileID: 21300000, guid: ad87cbc761ae5c04e8f985e90c5e8398, type: 3}
   font: {fileID: 12800000, guid: 891e74f22bb7a81428b07cec95ea5df6, type: 3}
   gold: {r: 1, g: 0.84, b: 0.38, a: 1}
   textDark: {r: 0.28, g: 0.1, b: 0, a: 1}

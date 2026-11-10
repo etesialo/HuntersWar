@@ -251,6 +251,7 @@ namespace Archer
                     hitEnemies.Add(e);
                     e.ApplyHit(data, dir);
                     if (data.lightning) LightningArc.Chain(e, data.damage, hitEnemies);
+                    if (data.fire) FireSplash(e, data.damage);
                     var el = Elem();
                     Sound.Play(HitSfx(el));
                     var elemFx = HitFor(el);
@@ -308,6 +309,30 @@ namespace Archer
             dir.Normalize();
             transform.position = prev;
             transform.rotation = Quaternion.LookRotation(dir);
+        }
+
+        // ───────── 불꽃 화살: 맞은 자리에서 펑 터져 주변 적에게 피해 ─────────
+
+        public const float FireSplashRadius = 2f;
+        public const float FireSplashRatio = 0.5f;
+
+        void FireSplash(Enemy center, float hitDamage)
+        {
+            var at = center.transform.position;
+            // 폭발 연출: 불 타격 연출을 크게 한 번 더
+            var fx = hitFire ? hitFire : hitSpark;
+            if (fx)
+            {
+                var s = Pool.Spawn(fx, at + Vector3.up * 0.4f, Quaternion.identity);
+                s.transform.localScale = Vector3.one * FireSplashRadius * 0.9f;
+                s.Play(hitFire ? Color.white : new Color(1f, 0.5f, 0.15f));
+            }
+            foreach (var e in GameManager.I.stage.Enemies.ToArray())
+            {
+                if (e == null || e == center || !e.IsActive) continue;
+                if (Combat.Flat(e.transform.position - at).sqrMagnitude > FireSplashRadius * FireSplashRadius) continue;
+                e.TakeDamage(hitDamage * FireSplashRatio, false, DamageColors.Fire);
+            }
         }
 
         static readonly Collider[] probeBuf = new Collider[8];

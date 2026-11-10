@@ -187,15 +187,10 @@ namespace Archer.EditorTools
             ui.roomText.fontSize = 34;
             ui.roomText.color = white;
 
-            var dots = hud.Find("StageDots") as RectTransform;
-            if (!dots)
-            {
-                dots = (RectTransform)new GameObject("StageDots", typeof(RectTransform)).transform;
-                dots.gameObject.layer = 5;
-                dots.SetParent(hud, false);
-            }
-            Place(dots, Top, new Vector2(0f, -275f), new Vector2(600f, 46f));
-            ui.stageDots = dots;
+            // 스테이지 표시 아래 진행 점(불 들어오는 원들)은 쓰지 않음: 있으면 지운다
+            var dots = hud.Find("StageDots");
+            if (dots) Object.DestroyImmediate(dots.gameObject);
+            ui.stageDots = null;
 
             var bossBg = ui.bossBar.GetComponent<Image>();
             Place(bossBg.rectTransform, Top, new Vector2(0f, -370f), new Vector2(860f, 60f));
@@ -286,7 +281,7 @@ namespace Archer.EditorTools
 
         // ───────── 로비 / 결과 ─────────
 
-        const string GameTitle = "궁수의 모험";
+        const string GameTitle = "Hunters War";
 
         static Text NewText(Transform parent, string name, string s, int size, Color c, UiSkin skin, TextAnchor align = TextAnchor.MiddleCenter)
         {
@@ -360,7 +355,7 @@ namespace Archer.EditorTools
             bg.type = Image.Type.Simple;
             var content = panel.transform.Find("Content");
 
-            // 제목: 배너 + 큰 글씨
+            // 제목: 로고 그림(UI_TitleLogo)이 있으면 그걸, 없으면 배너 + 큰 글씨
             var banner = Deco(content, "TitleBanner", skin.banner, Center, new Vector2(0f, 640f), new Vector2(960f, 326f));
             var title = NewText(content, "Title", GameTitle, 92, skin.gold, skin);
             Place(title.rectTransform, Center, new Vector2(0f, 646f), new Vector2(700f, 140f));
@@ -368,6 +363,12 @@ namespace Archer.EditorTools
             title.resizeTextMinSize = 40;
             title.resizeTextMaxSize = 92;
             Behind(banner.transform, title.transform);
+            var logoSprite = Spr("UI_TitleLogo", Vector4.zero);
+            var logo = Deco(content, "TitleLogo", logoSprite, Center, new Vector2(-20f, 590f), new Vector2(820f, 515f));
+            logo.preserveAspect = true;
+            logo.gameObject.SetActive(logoSprite);
+            banner.gameObject.SetActive(!logoSprite);
+            title.gameObject.SetActive(!logoSprite);
 
             // 골드 알약
             var pill = Deco(content, "GoldPill", skin.pill, new Vector2(1f, 1f), new Vector2(-200f, -90f), new Vector2(300f, 84f), true);

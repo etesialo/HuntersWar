@@ -48,9 +48,13 @@ namespace Archer
         float flashTimer;
         int tintState = -1;
         HpBar bar;
-        float burnTimer, burnDps, poisonDps, freezeTimer, slowTimer, dotTimer, stunTimer;
-        bool animHeld; // 빙결/기절로 애니메이션을 멈춰둔 상태
-        const float WindKnockMul = 2.5f, RockStunChance = 0.25f;
+        float burnTimer, burnDps, poisonDps, freezeTimer, slowTimer, dotTimer;
+        float airTimer;       // 바람 화살: 공중에 떠 있는 남은 시간 (그동안 행동 못 함)
+        float rockSlowTimer;  // 바위 화살: 둔화 남은 시간
+        bool animHeld;        // 빙결/공중에 뜸으로 애니메이션을 멈춰둔 상태
+        Vector3 modelPos;     // 공중에 띄울 때 기준이 되는 모델 원래 위치
+        const float WindLaunchChance = 0.25f, AirTime = 0.7f, AirHeight = 1.4f;
+        const float RockSlowTime = 2.5f, RockSlowMul = 0.65f, FrostSlowMul = 0.5f;
         GameObject aimLine;
 
         protected virtual void Awake()
@@ -61,6 +65,7 @@ namespace Archer
             anim = model.GetComponentInChildren<CharacterAnim>();
             mpb = new MaterialPropertyBlock();
             ModelScale = model.localScale;
+            modelPos = model.localPosition;
         }
 
         public void Init(StageManager owner, PlayerController target, float hpMul, float damageMul)
@@ -118,8 +123,9 @@ namespace Archer
             {
                 UpdatePunch(dt);
                 if (freezeTimer > 0f) freezeTimer -= dt;
-                else if (stunTimer > 0f) stunTimer -= dt;
+                else if (airTimer > 0f) airTimer -= dt;
                 else Tick(dt);
+                UpdateAir();
                 UpdateFreezeFx();
                 UpdateAnimHold();
                 UpdateKnock(dt);
@@ -154,25 +160,24 @@ namespace Archer
             // 넉백: 화살이 날아온 방향으로 살짝 밀림 (치명타는 더 세게 + 히트스톱)
             hitDir.y = 0f;
             if (!isBoss && knockback > 0f && hitDir.sqrMagnitude > 0.0001f)
-                knockVel = hitDir.normalized * ((crit ? 5.5f : 3.2f) * knockback * (s.wind ? WindKnockMul : 1f));
+                knockVel = hitDir.normalized * ((crit ? 5.5f : 3.2f) * knockback);
             if (crit) HitStop.Do(0.035f);
 
-            if (s.fire)
-            {
-                burnTimer = 2f;
-                burnDps = Mathf.Max(burnDps, s.damage * 0.35f);
-            }
+            // 불꽃: 주변 폭발 피해는 Projectile 에서 처리 (FireSplash). 지속 피해(화상)는 독이 맡으므로 없음
             if (s.poison) poisonDps = Mathf.Min(poisonDps + s.damage * 0.12f, s.damage * 0.6f);
             if (s.frost)
             {
                 slowTimer = 1.5f;
                 if (Random.value < 0.2f) freezeTimer = isBoss ? 0.4f : 1.2f;
             }
-            if (s.rock && Random.value < RockStunChance)
+            // 바람: 가끔 적을 공중에 띄움 (보스는 안 뜸)
+            if (s.wind && !isBoss && airTimer <= 0f && Random.value < WindLaunchChance)
             {
-                if (stunTimer <= 0f) Sound.Play(Sfx.Stun);
-                stunTimer = Mathf.Max(stunTimer, isBoss ? 0.3f : 0.8f);
+                airTimer = AirTime;
+                Sound.Play(Sfx.Stun);
             }
+            // 바위: 맞을 때마다 둔화 (얼음보다 약하지만 더 오래)
+            if (s.rock) rockSlowTimer = Mathf.Max(rockSlowTimer, RockSlowTime);
 
             TakeDamage(dmg, crit, crit ? DamageColors.Crit : DamageColors.Normal);
         }
@@ -271,10 +276,27 @@ namespace Archer
             else ReleaseIce(true);
         }
 
-        /// <summary>빙결이나 기절 중에는 애니메이션을 멈춘다 (둘이 겹쳐도 다 풀릴 때만 다시 움직임)</summary>
+        /// <summary>
+        /// 바람 화살로 공중에 뜸: 모델만 포물선으로 솟았다가 떨어진다 (판정·이동 몸통은 바닥에 그대로).
+        /// 모델이 따로 없는 적(model == transform)은 위치를 건드리지 않고 멈추기만 함.
+        /// </summary>
+        void UpdateAir()
+        {
+            if (model == transform) return;
+            if (airTimer <= 0f)
+            {
+                if (model.localPosition != modelPos) model.localPosition = modelPos;
+                return;
+            }
+            float t = 1f - Mathf.Clamp01(airTimer / AirTime);
+            float h = 4f * AirHeight * t * (1f - t); // 0 → 최고점 → 0
+            model.localPosition = modelPos + transform.InverseTransformDirection(Vector3.up) * h;
+        }
+
+        /// <summary>빙결이나 공중에 뜬 동안에는 애니메이션을 멈춘다 (둘이 겹쳐도 다 풀릴 때만 다시 움직임)</summary>
         void UpdateAnimHold()
         {
-            bool held = (freezeTimer > 0f || stunTimer > 0f) && !IsDead;
+            bool held = (freezeTimer > 0f || airTimer > 0f) && !IsDead;
             if (held == animHeld) return;
             animHeld = held;
             if (anim) anim.SetFrozen(held);
@@ -310,6 +332,7 @@ namespace Archer
         void TickStatus(float dt)
         {
             if (slowTimer > 0f) slowTimer -= dt;
+            if (rockSlowTimer > 0f) rockSlowTimer -= dt;
             if (burnTimer > 0f) burnTimer -= dt;
             dotTimer -= dt;
             if (dotTimer > 0f) return;
@@ -332,6 +355,7 @@ namespace Archer
             HitStop.Do(isBoss ? 0.2f : 0.045f);
             GameManager.I.cam.Shake(isBoss ? 0.45f : 0.1f, isBoss ? 0.4f : 0.12f);
             model.localScale = ModelScale;
+            if (model != transform) model.localPosition = modelPos; // 공중에 뜬 채 죽어도 바닥에서 쓰러지게
             DropLoot();
             OnDeath();
 
@@ -388,7 +412,7 @@ namespace Archer
         void UpdateTint(float dt)
         {
             if (flashTimer > 0f) flashTimer -= dt;
-            int s = flashTimer > 0f ? 1 : freezeTimer > 0f ? 2 : stunTimer > 0f ? 4 : poisonDps > 0f ? 3 : 0;
+            int s = flashTimer > 0f ? 1 : freezeTimer > 0f ? 2 : rockSlowTimer > 0f ? 4 : poisonDps > 0f ? 3 : 0;
             if (s == 3)
             {
                 // 중독: 초록빛이 꿀렁꿀렁 맥박 (매 프레임 갱신)
@@ -409,7 +433,7 @@ namespace Archer
             }
             // 빙결: 어둡게 누르지 않고 밝은 얼음빛으로 (색을 곱하는 셰이더라 1보다 크게 줘서 밝힘)
             var frost = new Color(1.1f, 1.3f, 1.6f, 1f);
-            // 기절(바위 화살): 돌처럼 누런 회색으로 굳은 느낌
+            // 둔화(바위 화살): 흙먼지를 뒤집어쓴 듯 누런 회색
             var stone = new Color(0.78f, 0.72f, 0.62f, 1f);
             var tint = s == 1 ? Color.white : s == 4 ? stone : frost;
             mpb.SetColor(BaseColor, tint);
@@ -424,7 +448,10 @@ namespace Archer
 
         protected CollisionFlags Move(Vector3 dir, float speed)
         {
-            float mul = slowTimer > 0f ? 0.5f : 1f;
+            // 얼음 둔화(50%)와 바위 둔화(35%)가 겹치면 더 느린 쪽
+            float mul = 1f;
+            if (slowTimer > 0f) mul = FrostSlowMul;
+            if (rockSlowTimer > 0f) mul = Mathf.Min(mul, RockSlowMul);
             var delta = dir * (speed * mul * Time.deltaTime);
             if (cc != null && cc.enabled)
             {

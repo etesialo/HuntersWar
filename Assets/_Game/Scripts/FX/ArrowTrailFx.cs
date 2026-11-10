@@ -39,6 +39,7 @@ namespace Archer
                 e.ResetAt();
             }
             foreach (var t in GetComponentsInChildren<TrailRenderer>()) t.Clear();
+            foreach (var e in GetComponentsInChildren<ElectricTrail>()) e.ResetTrail();
             foreach (var ps in GetComponentsInChildren<ParticleSystem>())
             {
                 ps.Clear(false);
