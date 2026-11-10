@@ -1,0 +1,61 @@
+# ── 유니티가 자동으로 다시 만드는 폴더 ──
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# 에디터 크래시 복구용 임시 씬
+/[Aa]ssets/_Recovery/
+/[Aa]ssets/_Recovery.meta
+
+# 예전 방 프리팹 백업 (로컬 보관용)
+/Backup/
+
+# ── IDE / 자동 생성 파일 ──
+.vs/
+.vscode/
+.idea/
+.gradle/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# 빌드 결과물
+*.apk
+*.aab
+*.unitypackage
+*.app
+crashlytics-build.properties
+sysinfo.txt
+
+# 셰이더 캐시 / 에셋 번들 자동 생성
+/[Aa]ssets/[Aa]ssetStoreTools*
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# ── 개인 로컬 설정 ──
+.claude/settings.local.json
+.mcp.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

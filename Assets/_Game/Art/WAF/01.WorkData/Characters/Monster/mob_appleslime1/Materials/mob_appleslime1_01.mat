@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mob_appleslime1_01
+  m_Shader: {fileID: 4800000, guid: bfe0c337bc9e59a47a1a18252206acf5, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _EMISSION
+  - _ENABLECORRECTION_ON
+  - _USEEMISSION_ON
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _ColorMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 9d152f3623be1e44191e6a99f7e316d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapA:
+        m_Texture: {fileID: 2800000, guid: b39b36ed16b38b94fb058de1e5c7fdbf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapB:
+        m_Texture: {fileID: 2800000, guid: 33dd19effc9b68a458652382f30bc06f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapEffect:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapG:
+        m_Texture: {fileID: 2800000, guid: 8e55f4aaa31377c49a12a432eb5eda72, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapMask:
+        m_Texture: {fileID: 2800000, guid: 907af2a0adcc16347802c9e2df25516a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapR:
+        m_Texture: {fileID: 2800000, guid: 2660928f321e67d46811f037e62ae5e9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapWeightMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RimTex:
+        m_Texture: {fileID: 2800000, guid: c76e8444b48d82d41a4b59f33469a2cb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _matcapEffectMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Blend: 1
+    - _Blend2: 0
+    - _Contrast: 1
+    - _DisableEnv: 0
+    - _Dissolve: 0
+    - _DissolveProgress: 1
+    - _Edge: 0.01
+    - _EmissionMulByBaseColor: 1
+    - _EnableCorrection: 1
+    - _MatCapEffectIntensity: 1
+    - _MatCapEffectMoveX: 0
+    - _MatCapEffectMoveY: 0
+    - _MatCapEffectRotate: 0
+    - _MatCapEffectWeight: 1
+    - _MatCapWeight: 1
+    - _MipmapBias: 0
+    - _MultPower: 2.5
+    - _OutLineWeight: 0.015
+    - _RimPower: 1
+    - _Saturation2: 1
+    - _Temperature: 100
+    - _Tint: 100
+    - _UseCorrection: 0
+    - _UseCurve: 0
+    - _UseEffectMapcap: 0
+    - _UseEmission: 1
+    - _WRadius: 1000
+    m_Colors:
+    - _BColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0.16981131, g: 0.0030737682, b: 0, a: 1}
+    - _EmissionMapChannelMask: {r: 1, g: 1, b: 1, a: 0}
+    - _GColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MatCapAColor: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+    - _MatCapBColor: {r: 0.7681134, g: 0.8018868, b: 0.7602795, a: 1}
+    - _MatCapGColor: {r: 0.7372549, g: 0.7372549, b: 0.7372549, a: 1}
+    - _MatCapRColor: {r: 1, g: 0.48490566, b: 0.4481132, a: 1}
+    - _OutLineColor: {r: 0.47798735, g: 0.33519235, b: 0.33519235, a: 1}
+    - _RColor: {r: 0.8867924, g: 0.8658775, b: 0.80731577, a: 1}
+    - _RimColor: {r: 1, g: 0.5725887, b: 0.5613208, a: 0}
+    - _SubColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

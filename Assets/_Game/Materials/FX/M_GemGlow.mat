@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_GemGlow
+  m_Shader: {fileID: 4800000, guid: 5682ce9acf500ea44a41b431963a0287, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _CoreSize: 0.6
+    - _CoreStrength: 0
+    - _DepthPull: 0.3
+    - _EndSize: 1.6
+    - _FadeIn: 0.15
+    - _FadeOut: 1.5
+    - _HaloStrength: 0.6
+    - _InnerFill: 0.15
+    - _Intensity: 0.6
+    - _Pulse: 0.3
+    - _PulseSpeed: 1.2
+    - _RayCount: 10
+    - _RaySharp: 6
+    - _RaySpeed: 0.15
+    - _RayStrength: 0.35
+    - _RingCount: 4
+    - _RingSoft: 1
+    - _RingWidth: 0.356
+    - _Rise: 0.31
+    - _RiseCurve: 0.7
+    - _Size: 2.2
+    - _Speed: 0.1
+    - _StarLength: 0.7
+    - _StarSpeed: 1.5
+    - _StarStrength: 0.6
+    - _StartRadius: 0.1
+    - _StartSize: 0.2
+    m_Colors:
+    - _Color: {r: 0.35, g: 1, b: 0.8, a: 1}
+    - _CoreColor: {r: 0.7, g: 1, b: 0.9, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

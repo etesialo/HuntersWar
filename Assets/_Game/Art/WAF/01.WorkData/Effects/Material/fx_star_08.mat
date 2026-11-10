@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2641802925752500426
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: fx_star_08
+  m_Shader: {fileID: 4800000, guid: 78bc10c82ee5aca41abdbe9866fc12a1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DisplacementTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EdgeAroundRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8f1c43be111b76d4cb8c63bec3e87658, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Blend1: 5
+    - _Blend2: 10
+    - _BumpStrength: 0
+    - _CamDistMax: 100
+    - _CamWeight: 5
+    - _ColorStrength: 1
+    - _CullMode: 0
+    - _DisableEnv: 0
+    - _DisplacementWeight: 0
+    - _DissolveEdge: 0
+    - _DissolveProgress: 1
+    - _DistortionRotAnchorU: 0.5
+    - _DistortionRotAnchorV: 0.5
+    - _DistortionStrength: 0
+    - _DistortionTexMoveU: 0
+    - _DistortionTexMoveV: 0
+    - _DistortionTexRotUV: 0
+    - _Edge: 0.12
+    - _EdgeAround: 0.05
+    - _EdgeAroundHDR: 1.45
+    - _EdgeAroundPower: 1.9
+    - _EmissionMulByBaseColor: 0
+    - _EnableCamWeight: 0
+    - _EnalbeLightMask: 0
+    - _EnvWeight: 0
+    - _FlowIntensity: 0
+    - _FlowSpeed: 1
+    - _MainTexMoveU: 0
+    - _MainTexMoveV: 0
+    - _MainTexRotAnchorU: 0.5
+    - _MainTexRotAnchorV: 0.5
+    - _MainTexRotUV: 0
+    - _ModifyAlpha: 0
+    - _MovementX: 0
+    - _MovementY: 0
+    - _OnlyY: 0
+    - _Stencil: 0
+    - _StencilComp: 0
+    - _StencilOp: 0
+    - _UseCustomData: 0
+    - _UseDistortionAnchor: 0
+    - _UseEmission: 0
+    - _UseGlobalRate: 0
+    - _ZTestMode: 4
+    - _ZWriteMode: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionMapChannelMask: {r: 1, g: 1, b: 1, a: 0}
+    - _TintColor: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

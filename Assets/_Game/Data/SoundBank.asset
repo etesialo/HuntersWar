@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee7fa0e8428600479f2a2694b754291, type: 3}
+  m_Name: SoundBank
+  m_EditorClassIdentifier: Assembly-CSharp::Archer.SoundBank
+  sfxVolume: 1
+  bgmVolume: 0.45
+  bgmBattle: {fileID: 8300000, guid: dc28e8a755dbed241a7d0b99bb09054a, type: 3}
+  bgmBoss: {fileID: 8300000, guid: 15586ec620b624c41841b2223fecec74, type: 3}
+  bgmLobby: {fileID: 8300000, guid: d882d12a8f62c494eb87f2177a876e13, type: 3}
+  entries:
+  - id: 0
+    clips:
+    - {fileID: 8300000, guid: 7f52a18abaf881a4980ebeb271baed76, type: 3}
+    - {fileID: 8300000, guid: e8c8468e96f39cb4d9bc0927eff9f943, type: 3}
+    volume: 0.5
+    pitchJitter: 0.06
+    minInterval: 0.06
+  - id: 1
+    clips:
+    - {fileID: 8300000, guid: b4b51b5db65c48143a0e3d7b2017424f, type: 3}
+    volume: 0.55
+    pitchJitter: 0.06
+    minInterval: 0.06
+  - id: 2
+    clips:
+    - {fileID: 8300000, guid: fe745defc7ba01c4da9b51c052f2fa35, type: 3}
+    volume: 0.55
+    pitchJitter: 0.06
+    minInterval: 0.06
+  - id: 3
+    clips:
+    - {fileID: 8300000, guid: 0ad502fc9487ae8409b88374a36a5492, type: 3}
+    volume: 0.55
+    pitchJitter: 0.06
+    minInterval: 0.06
+  - id: 4
+    clips:
+    - {fileID: 8300000, guid: 84da553586f177e40b550d5f4c459a20, type: 3}
+    - {fileID: 8300000, guid: c0e3ae4a911b0fe4eb664055d3b5fb80, type: 3}
+    - {fileID: 8300000, guid: 1b85d3f9dff9afc4b817d841817016e2, type: 3}
+    - {fileID: 8300000, guid: ac8cd53ec3a188f4b88e1171e16c6706, type: 3}
+    volume: 0.55
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 5
+    clips:
+    - {fileID: 8300000, guid: 49b529b3efca53d4784b12ed779491f4, type: 3}
+    - {fileID: 8300000, guid: 05ec52f20084d454db115de75c0df710, type: 3}
+    - {fileID: 8300000, guid: edc946a510daa6244ab76a8505527956, type: 3}
+    volume: 0.55
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 6
+    clips:
+    - {fileID: 8300000, guid: 6d361a3f1911d924cbe1a77d09f37ae2, type: 3}
+    volume: 0.45
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 7
+    clips:
+    - {fileID: 8300000, guid: 6d33cb8d87ff13d4da7622807ba69a3e, type: 3}
+    - {fileID: 8300000, guid: 856d418da28353a41a8e5b5f56c08f2f, type: 3}
+    - {fileID: 8300000, guid: ff7e8f80441b555479fd393da4245e29, type: 3}
+    - {fileID: 8300000, guid: d0dccbba3149c0549875213beca87ee2, type: 3}
+    volume: 0.55
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 8
+    clips:
+    - {fileID: 8300000, guid: 6a9d8edd73fd13140afaa36d32f63c93, type: 3}
+    volume: 0.45
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 9
+    clips:
+    - {fileID: 8300000, guid: 49b529b3efca53d4784b12ed779491f4, type: 3}
+    - {fileID: 8300000, guid: 05ec52f20084d454db115de75c0df710, type: 3}
+    volume: 0.45
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 10
+    clips:
+    - {fileID: 8300000, guid: 6d361a3f1911d924cbe1a77d09f37ae2, type: 3}
+    volume: 0.4
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 11
+    clips:
+    - {fileID: 8300000, guid: d0dccbba3149c0549875213beca87ee2, type: 3}
+    volume: 0.45
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 12
+    clips:
+    - {fileID: 8300000, guid: 0a40f271ea9801b41a3d53c7f95600cd, type: 3}
+    volume: 0.5
+    pitchJitter: 0.06
+    minInterval: 0.15
+  - id: 13
+    clips:
+    - {fileID: 8300000, guid: 6612e4808a15dec4d99d5e09659cd5e4, type: 3}
+    volume: 0.75
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 14
+    clips:
+    - {fileID: 8300000, guid: 1661553d391c42e42891f812704015f0, type: 3}
+    - {fileID: 8300000, guid: fc34a83e80065c348ad9963060f477c9, type: 3}
+    - {fileID: 8300000, guid: 3d9763a09df83464b8d70487c0f0729a, type: 3}
+    volume: 0.45
+    pitchJitter: 0.06
+    minInterval: 0.08
+  - id: 15
+    clips:
+    - {fileID: 8300000, guid: 837ccdca5dcab6f4a90f5aed960c649f, type: 3}
+    - {fileID: 8300000, guid: 033e722b9995dd642b851bfc8b30aa1b, type: 3}
+    - {fileID: 8300000, guid: d4055cb99bee36e4990e1527d8439c4c, type: 3}
+    volume: 0.4
+    pitchJitter: 0.06
+    minInterval: 0.06
+  - id: 16
+    clips:
+    - {fileID: 8300000, guid: 75c0908b7df25234fbe31711aaf22f41, type: 3}
+    volume: 0.7
+    pitchJitter: 0.06
+    minInterval: 0.2
+  - id: 17
+    clips:
+    - {fileID: 8300000, guid: f41e53125666ba64a9be7d03499f0dd9, type: 3}
+    volume: 0.85
+    pitchJitter: 0.06
+    minInterval: 0.1
+  - id: 18
+    clips:
+    - {fileID: 8300000, guid: 8c5987023c4f440468cf239df6b783ad, type: 3}
+    volume: 0.6
+    pitchJitter: 0.06
+    minInterval: 0.3
+  - id: 19
+    clips:
+    - {fileID: 8300000, guid: ecb8429b365f1ff41a1da0bdeec66513, type: 3}
+    volume: 0.55
+    pitchJitter: 0.06
+    minInterval: 0.035
+  - id: 20
+    clips:
+    - {fileID: 8300000, guid: 7d38e4fb11c42d1429e6ab83ca229a44, type: 3}
+    volume: 0.45
+    pitchJitter: 0.06
+    minInterval: 0.035
+  - id: 21
+    clips:
+    - {fileID: 8300000, guid: f7f3bfa4aff2361438b7beb0fa6047b4, type: 3}
+    volume: 0.8
+    pitchJitter: 0.06
+    minInterval: 0.2
+  - id: 22
+    clips:
+    - {fileID: 8300000, guid: fb9f687516424c648b0aa5711219ac6c, type: 3}
+    volume: 0.8
+    pitchJitter: 0.06
+    minInterval: 0.2
+  - id: 23
+    clips:
+    - {fileID: 8300000, guid: 245cac526b5c84a4babc956292a2953e, type: 3}
+    volume: 0.7
+    pitchJitter: 0.06
+    minInterval: 0.05
+  - id: 24
+    clips:
+    - {fileID: 8300000, guid: 24309773deb7fe145a96a38d8a81dd83, type: 3}
+    volume: 0.7
+    pitchJitter: 0.06
+    minInterval: 0.5
+  - id: 25
+    clips:
+    - {fileID: 8300000, guid: 49cbfba0d21fe09408239929f5d51eba, type: 3}
+    volume: 0.8
+    pitchJitter: 0.06
+    minInterval: 0.5
+  - id: 26
+    clips:
+    - {fileID: 8300000, guid: 8edbcc357c5feb54e8daf55991edfd0d, type: 3}
+    volume: 0.8
+    pitchJitter: 0.06
+    minInterval: 0.5
+  - id: 27
+    clips:
+    - {fileID: 8300000, guid: 5c7aaaa4a24878c4391fb8242723b81c, type: 3}
+    volume: 0.85
+    pitchJitter: 0.06
+    minInterval: 0.5
+  - id: 28
+    clips:
+    - {fileID: 8300000, guid: 9303f478a4585c04fab0a3754e50f2d1, type: 3}
+    volume: 0.85
+    pitchJitter: 0.06
+    minInterval: 0.5
+  - id: 29
+    clips:
+    - {fileID: 8300000, guid: c90e9a8ed664bde40b39b96166e1937f, type: 3}
+    volume: 0.6
+    pitchJitter: 0.06
+    minInterval: 0.1
+  - id: 30
+    clips:
+    - {fileID: 8300000, guid: 6d361a3f1911d924cbe1a77d09f37ae2, type: 3}
+    volume: 0.6
+    pitchJitter: 0.06
+    minInterval: 0.08

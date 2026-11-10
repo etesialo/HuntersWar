@@ -1,0 +1,236 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2232951370799534692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5263297562437939187}
+  m_Layer: 0
+  m_Name: Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5263297562437939187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232951370799534692}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5279259746562099309}
+  m_Father: {fileID: 2466016151000601526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4755788482842677007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2466016151000601526}
+  - component: {fileID: 875533547316015267}
+  - component: {fileID: 3891904329821159115}
+  m_Layer: 0
+  m_Name: SkeletonArcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2466016151000601526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4755788482842677007}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5263297562437939187}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &875533547316015267
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4755788482842677007}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1.2
+  m_Radius: 0.4
+  m_SlopeLimit: 45
+  m_StepOffset: 0.05
+  m_SkinWidth: 0.03
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.6, z: 0}
+--- !u!114 &3891904329821159115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4755788482842677007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ae9d8a88cf782499ae07c0137ffe55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Archer.EnemyShooter
+  displayName: "\uD574\uACE8 \uAD81\uC218"
+  maxHp: 50
+  moveSpeed: 1.8
+  contactDamage: 30
+  attackDamage: 70
+  bodyRadius: 0.4
+  expValue: 3
+  coinValue: 1
+  isBoss: 0
+  model: {fileID: 5263297562437939187}
+  hpBarOffset: 1.5005125
+  hpBarWidth: 90
+  aimTime: 0.8
+  bulletSpeed: 8
+  moveTimeRange: {x: 1, y: 2}
+  keepDistance: 4
+--- !u!1001 &2689742268782964936
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5263297562437939187}
+    m_Modifications:
+    - target: {fileID: 520451728503921395, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c97b218b62d870b4fa93a40a042c9c47, type: 2}
+    - target: {fileID: 520451728503921395, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052652506986614476, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052652506986614476, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9880228
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9880228
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9880228
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000017667224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175269346083737841, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173917005098325684, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      propertyPath: m_Name
+      value: mob_froggy_magic1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9173917005098325684, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2973403211918754513}
+  m_SourcePrefab: {fileID: 100100000, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+--- !u!4 &5279259746562099309 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7786812350076762277, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+  m_PrefabInstance: {fileID: 2689742268782964936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6486220022294537852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9173917005098325684, guid: 3d341fc3582b6c1458d2a0e866828c01, type: 3}
+  m_PrefabInstance: {fileID: 2689742268782964936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2973403211918754513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6486220022294537852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be88f7dd412ad24da56af7fc12d9cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Archer.CharacterAnim
+  attackHold: 0.45

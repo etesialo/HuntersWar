@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4930dcbf3cd203479dfe2c68b6cd39e, type: 3}
+  m_Name: UiSkin
+  m_EditorClassIdentifier: Assembly-CSharp::Archer.UiSkin
+  panel: {fileID: 21300000, guid: 99a388c9a0162f747bae989d39f22879, type: 3}
+  card: {fileID: 21300000, guid: 47791b8550aa6c747a5a2a54e86ee63e, type: 3}
+  banner: {fileID: 21300000, guid: bd69dcfdbf453a34988361aa1899c619, type: 3}
+  buttonGold: {fileID: 21300000, guid: 2845c743decef7643b48e359c11acacb, type: 3}
+  buttonNavy: {fileID: 21300000, guid: 42bec9057d6685f4886cb632852d17bf, type: 3}
+  pill: {fileID: 21300000, guid: ce1db32c9d906864c95cbb43e677c97b, type: 3}
+  barFrame: {fileID: 21300000, guid: 75c227c72db4f90429a3563885c090a1, type: 3}
+  barFill: {fileID: 21300000, guid: 9ceed554824770c4c983c1be2a476d91, type: 3}
+  expColor: {r: 0.3, g: 0.85, b: 0.95, a: 1}
+  bossColor: {r: 0.95, g: 0.25, b: 0.25, a: 1}
+  levelBadge: {fileID: 21300000, guid: 5ff89fa002f8d5149a38830eb4f3a112, type: 3}
+  coin: {fileID: 21300000, guid: 5017c512aabcab248b4fae9c02c8a2a0, type: 3}
+  pauseIcon: {fileID: 21300000, guid: 18001c4e1d7a06c43965d82cecea289c, type: 3}
+  iconRing: {fileID: 21300000, guid: b5429a5f5d35c3c4fa3d3b87774eff70, type: 3}
+  nodeDone: {fileID: 21300000, guid: 689a76e84e15908459899b66b75da37f, type: 3}
+  nodeCurrent: {fileID: 21300000, guid: 12d678083f1d9ca4494a1f9fcf1c9f05, type: 3}
+  nodeBoss: {fileID: 21300000, guid: 53a7b9d41d2bf134d9726932a51b9598, type: 3}
+  nodeUpcoming: {r: 0.35, g: 0.38, b: 0.5, a: 0.9}
+  skillIcons:
+  - {fileID: 21300000, guid: bf551baa2c88c3340b7f3c8fb83e47e5, type: 3}
+  - {fileID: 21300000, guid: 9cdf91b217379db4abf94a7ff827c65b, type: 3}
+  - {fileID: 21300000, guid: a6b88134c0a17d542afe77423a859747, type: 3}
+  - {fileID: 21300000, guid: 003125a3cb33089498ed3dbbe7c06c78, type: 3}
+  - {fileID: 21300000, guid: eae8d50c0e6c9a9419447b5bea2cc547, type: 3}
+  - {fileID: 21300000, guid: 6cf874abe84b9554fa4a7fc0bec1a596, type: 3}
+  - {fileID: 21300000, guid: fc31c226b366cb342a5ff49661b35f16, type: 3}
+  - {fileID: 21300000, guid: bbea9589405932c4695c2bf24f74ea97, type: 3}
+  - {fileID: 21300000, guid: 21036f6342d86d240a7eaf29c37de9c3, type: 3}
+  - {fileID: 21300000, guid: 06684d791438aa44b9963388d4e8a591, type: 3}
+  - {fileID: 21300000, guid: 2a377a2d44c4d1442978bdb1df4327ec, type: 3}
+  - {fileID: 21300000, guid: 3b01a492fde240e4db45d1c861d3478c, type: 3}
+  - {fileID: 21300000, guid: 2f7925ac4ddae6841ab05bcca454ef88, type: 3}
+  - {fileID: 21300000, guid: e484c195b0ac3a142976479739fdecc2, type: 3}
+  - {fileID: 21300000, guid: 55985e177fb3d074babaf8ec0f0ddd96, type: 3}
+  - {fileID: 21300000, guid: e4ccaec1d17d79d41a40cd800fea1936, type: 3}
+  - {fileID: 21300000, guid: 2f428a1c9f7b7f949aca535804b17690, type: 3}
+  - {fileID: 21300000, guid: baf547ae3038ca34ead87741f587b0e0, type: 3}
+  - {fileID: 21300000, guid: 9393140e26a80b7419b055cf85318510, type: 3}
+  - {fileID: 21300000, guid: a8bcd7190dd520f42a8a900087e91abd, type: 3}
+  font: {fileID: 12800000, guid: 891e74f22bb7a81428b07cec95ea5df6, type: 3}
+  gold: {r: 1, g: 0.84, b: 0.38, a: 1}
+  textDark: {r: 0.28, g: 0.1, b: 0, a: 1}

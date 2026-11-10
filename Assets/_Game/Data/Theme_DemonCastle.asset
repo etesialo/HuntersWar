@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6b11bc36950324da7e7950be5db628, type: 3}
+  m_Name: Theme_DemonCastle
+  m_EditorClassIdentifier: Assembly-CSharp::Archer.RoomTheme
+  obstacles:
+  - {fileID: 4638645289974963453, guid: 4ff6eb2f4b4110b4ea944dc0e090629a, type: 3}
+  - {fileID: 6844585806906422379, guid: 878bbb3aefb796e4b97bbf6b66eef9f9, type: 3}
+  - {fileID: 1869224946986028326, guid: fb4017108ea8ed141ac06a77f59b2e2c, type: 3}
+  - {fileID: 3637729052719730845, guid: 6a05f6328b28b0940a742130c62cfef7, type: 3}
+  - {fileID: 3261681769394454655, guid: 4cd696e539b14eb4b84ccc2458849b60, type: 3}
+  - {fileID: 3144206654236437512, guid: 82eacfd0bfc028d47843dff2846954af, type: 3}
+  - {fileID: 4764892032990831967, guid: 876e8e92748ed5a4b874e7fb14f03641, type: 3}
+  - {fileID: 5449679052309087758, guid: 53016b21e238b6c48b1139df5d546dc3, type: 3}
+  - {fileID: 7393517117047076025, guid: 5564a73a357221648b2924e5348e4bee, type: 3}
+  - {fileID: 5512873554995279718, guid: d10a047c079a94a4798d6858dea47367, type: 3}
+  doorPillar: {fileID: 7879300032850721917, guid: d239c70aa3ed3d843a89f853418e6dae, type: 3}
+  backdrop:
+  - {fileID: 1982445854775667604, guid: abaec3438617cfe4a8a455f1add81173, type: 3}
+  - {fileID: 5365256516249242968, guid: b5ae076449dc3944d8048f0002a70808, type: 3}
+  - {fileID: 1169982068013140726, guid: 31810ef029e4b9c43ad4602bfd4f0874, type: 3}
+  - {fileID: 658418040371015221, guid: 1216c678031f78d41869af672b55ecd6, type: 3}
+  topGlow: {fileID: 4981636156522582112, guid: 89675fc552c6b084b9978270d0e8ae0c, type: 3}
+  topGlowMaterial: {fileID: 2100000, guid: 0f70ca827be4be641a110984ff609d85, type: 2}
+  topGlowPos: {x: 0, y: 2.5, z: 10.11}
+  topGlowScale: 31.809225

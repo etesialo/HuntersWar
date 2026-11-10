@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e37d8367e7659334cb59340ff543dae8, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Archer.GameConfig
+  player: {fileID: 5802614425666857710, guid: 23a73fc0d83410f439868448803518bd, type: 3}
+  arrow: {fileID: 7466150781463745758, guid: d578728d634ae6b45861de453af4f6ea, type: 3}
+  enemyBullet: {fileID: 311612388510792888, guid: c3f96be429ec9f347bd56e17086b08fc, type: 3}
+  expGem: {fileID: 2011532741088276543, guid: 7aa5ed279cf90ae41ac16bc980f81336, type: 3}
+  coin: {fileID: 2440456083275185397, guid: 99da64b20bb75904c87296d1ed4f46de, type: 3}
+  angel: {fileID: 3667460098479644309, guid: d7f58ab8d7e73874a8b5ccbf6ea21038, type: 3}
+  slime: {fileID: 4635678326472321301, guid: d4feb57a6c8500d49904b6571ad2603d, type: 3}
+  bat: {fileID: 8920478817887961236, guid: 31b57530e33e1324298014a44efa05cb, type: 3}
+  archer: {fileID: 3891904329821159115, guid: abc7be1ddc54e4044b838ee7b4332693, type: 3}
+  charger: {fileID: 4160873178430657836, guid: 6e4954368a30e0e44b2e026dc1fc4601, type: 3}
+  turret: {fileID: 8122093768698281828, guid: eb549417e904d98458107850b116b4ff, type: 3}
+  miniBoss: {fileID: 2775329611109477103, guid: fe29d6c10bd3303408d9a89a91c57966, type: 3}
+  boss: {fileID: 4054006966102575438, guid: e480f5cdad035e8449d8add3bdb48f03, type: 3}
+  rooms:
+  - {fileID: 1557068319614898253, guid: 6a0ccf71fdfcc07469e8c1ad6322ab6a, type: 3}
+  - {fileID: 6675540559478563546, guid: c114c729f2baaa84d9f17f6c512b64a2, type: 3}
+  - {fileID: 7827646108410445086, guid: d007f5475adb2244ea1e4106a801d460, type: 3}
+  - {fileID: 8318395423451023249, guid: 1647116ec3d42fd48bb2437ea9c23be8, type: 3}
+  - {fileID: 8197837484500780570, guid: b07ff29f15fac5d4f93ba745ad54af6e, type: 3}
+  - {fileID: 2101962903331762082, guid: d5e7fe5434ede3b498daf863a7a19ff4, type: 3}
+  - {fileID: 4741975634859239933, guid: 29d1b9726a0300748be2e4c2c0c52f28, type: 3}
+  - {fileID: 6381100091765546351, guid: 50eb2a5b3e1615b4fb8fa85733e20ed0, type: 3}
+  - {fileID: 8144229032743835176, guid: 70951b0294246d74c9322b28ed589afb, type: 3}
+  - {fileID: 8543624848470773362, guid: 16ff9a771207b5e45909e4583313a168, type: 3}
+  exitBarrier: {fileID: 2514072639838751367, guid: d41d63922c7b5d343ad09c9ca31c1847, type: 3}
+  theme: {fileID: 11400000, guid: e37f335344c6493459f3b563060e29b9, type: 2}
+  floorModel: {fileID: 919132149155446097, guid: 4c1bbfa4bdd1a2744b5afa1f27b9ea6f, type: 3}
+  wallModel: {fileID: 919132149155446097, guid: 7f7943268c947f943a25f12ed4ba2c4b, type: 3}
+  testLoopRoom: 1
+  testGodMode: 1
+  aimLine: {fileID: 2100000, guid: f586d3a29bb85bb418d512f2bdc55ea8, type: 2}
+  fireOrbFx: {fileID: 3603075735123108617, guid: ba9862a52379f4c41a449278cfcc6bd5, type: 3}
+  enemySpawnFx: {fileID: 804114587323648619, guid: b930b76a7de82e34da1fce3c50436ae4, type: 3}
+  iceBlock: {fileID: 3441211370704369070, guid: 70a977eeec0baf7479f4bea37ae9e5b2, type: 3}
+  iceShatter: {fileID: 2185157837732797377, guid: 2b51a1e1db34e8944ac6a45f37c39a30, type: 3}
+  poisonedFx: {fileID: 6226326183675875308, guid: e45997192f903c84cb2d31776007e2e2, type: 3}
+  playerContactHit: {fileID: 7361588429734016423, guid: 5c8a9d63cc6046849bdf12677913a5a2, type: 3}
+  ambience: {fileID: 0}
+  sounds: {fileID: 11400000, guid: a91fb983f01a5d74cbabd303f5528a56, type: 2}
+  autoObstacles: 0
+  holeWall: {fileID: 2100000, guid: fa0c3cc1a7558b24182e5c63f2941f4d, type: 2}
+  holeWater: {fileID: 2100000, guid: 650bebb8a20858e48b083a98be67f157, type: 2}
+  holeMask: {fileID: 2100000, guid: ef3036514e02ccf44b512ee1869d8042, type: 2}
+  floor: {fileID: 2100000, guid: 566fb32b617e3a543be0d2749fe41fc4, type: 2}
+  wall: {fileID: 2100000, guid: 76c79dbd7a3dbb54cb73dedd831d8dfd, type: 2}
+  obstacle: {fileID: 2100000, guid: b418679d063f28443816e1ee4badf107, type: 2}
+  water: {fileID: 2100000, guid: 36a4157bb7cd2d74cb09a496d1226d20, type: 2}
+  door: {fileID: 2100000, guid: d473225b89746654f9348cec7fb70030, type: 2}
+  portal: {fileID: 2100000, guid: 96d65fd03b1358248b37c82913d90d5e, type: 2}
+  telegraph: {fileID: 2100000, guid: 0cdc31e9459d596429c8fc02e3c9eb86, type: 2}
+  orb: {fileID: 2100000, guid: f8be413a9540fc143b96f770551f5b95, type: 2}
+  hpScalePerRoom: 0.15
+  dmgScalePerRoom: 0.06

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Env_Wall
+  m_Shader: {fileID: 4800000, guid: 052b9747cd8d0f54080324b4b8e34d1f, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 89678444dad11db4eb132ee496457a77, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AmbientStrength: 0.4
+    - _BakedAmbientMix: 0.2
+    - _BakedGIStrength: 1.35
+    - _BumpScale: 0.5
+    - _BumpShade: 1
+    - _CastShadowStrength: 0.88
+    - _Cull: 0
+    - _FloorAO: 0
+    - _FloorAORange: 1
+    - _FloorAOStrength: 0.77
+    - _FloorHoles: 0
+    - _Gloss: 0.01
+    - _GradientHeight: 2.97
+    - _GradientStrength: 0.58
+    - _LightIntensity: 1.46
+    - _OcclusionStrength: 0.6
+    - _RampSmooth: 0.47
+    - _RampThreshold: 0.77
+    - _ReceiveShadowSoft: 0
+    - _RimPower: 2.82
+    - _RimStrength: 0.17
+    - _SSAOStrength: 1
+    - _ShadowStrength: 0.88
+    - _SoftMode: 0
+    - _SoftNormal: 0
+    - _SpecStrength: 0
+    - _TopLight: 0.28
+    - _UseEmission: 0
+    - _UseNormal: 0
+    - _VertexAO: 0
+    - _VertexAORange: 0.02
+    - _VertexGI: 0
+    m_Colors:
+    - _AOColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CastShadowColor: {r: 0.5967125, g: 0.59260416, b: 0.6509434, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GradientColor: {r: 0.6239765, g: 0.6546389, b: 0.7735849, a: 1}
+    - _GroundColor: {r: 0.33584914, g: 0, b: 0.8396226, a: 1}
+    - _RimColor: {r: 1, g: 0.6180215, b: 0.23113209, a: 1}
+    - _ShadowColor: {r: 0.5967125, g: 0.59260416, b: 0.6509434, a: 1}
+    - _SkyColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+    - _SoftCenter: {r: 0, g: 0.5, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
